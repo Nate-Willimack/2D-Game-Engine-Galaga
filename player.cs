@@ -14,7 +14,7 @@ namespace SpaceShooter
             {
                 Size = new Size(50, 50),
                 BackColor = Color.Blue,
-                Location = new Point(form.ClientSize.Width / 2, form.ClientSize.Height - 60) // Start at bottom center
+                Location = new Point(form.ClientSize.Width / 2, form.ClientSize.Height - 60)
             };
 
             form.Controls.Add(PlayerBox);
