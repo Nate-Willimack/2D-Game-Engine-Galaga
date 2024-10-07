@@ -1,11 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SpaceShooter
@@ -17,6 +12,9 @@ namespace SpaceShooter
         Random rnd;
         Timer timer;
         Player player;
+        List<Bullet> bullets;
+        List<Enemy> enemies;
+        Random enemySpawnRnd;
 
         public Form1()
         {
@@ -29,8 +27,11 @@ namespace SpaceShooter
             backgroundspeed = 4;
             stars = new PictureBox[50];
             rnd = new Random();
-            InitializeStars();
+            bullets = new List<Bullet>();
+            enemies = new List<Enemy>();
+            enemySpawnRnd = new Random();
 
+            InitializeStars();
             player = new Player(this);
 
             timer = new Timer();
@@ -53,6 +54,15 @@ namespace SpaceShooter
 
         private void UpdateScreen(object sender, EventArgs e)
         {
+            MoveStars();
+            UpdateBullets();
+            UpdateEnemies();
+            CheckCollisions();
+            SpawnEnemy();
+        }
+
+        private void MoveStars()
+        {
             foreach (PictureBox star in stars)
             {
                 star.Top += backgroundspeed;
@@ -61,6 +71,59 @@ namespace SpaceShooter
                 {
                     star.Top = 0;
                     star.Left = rnd.Next(this.ClientSize.Width);
+                }
+            }
+        }
+
+        private void SpawnEnemy()
+        {
+            if (enemySpawnRnd.Next(100) < 10)
+            {
+                Point spawnPoint = new Point(enemySpawnRnd.Next(0, this.ClientSize.Width - 40), -40);
+                enemies.Add(new Enemy(this, spawnPoint));
+            }
+        }
+
+        private void UpdateEnemies()
+        {
+            foreach (var enemy in enemies.ToList())
+            {
+                enemy.MoveDown();
+                if (enemy.IsOffScreen(this.ClientSize.Height))
+                {
+                    enemies.Remove(enemy);
+                    this.Controls.Remove(enemy.EnemyBox);
+                }
+            }
+        }
+
+        private void UpdateBullets()
+        {
+            foreach (var bullet in bullets.ToList())
+            {
+                bullet.MoveUp();
+                if (bullet.IsOffScreen())
+                {
+                    bullets.Remove(bullet);
+                    this.Controls.Remove(bullet.BulletBox);
+                }
+            }
+        }
+
+        private void CheckCollisions()
+        {
+            foreach (var bullet in bullets.ToList())
+            {
+                foreach (var enemy in enemies.ToList())
+                {
+                    if (bullet.BulletBox.Bounds.IntersectsWith(enemy.EnemyBox.Bounds))
+                    {
+                        bullets.Remove(bullet);
+                        enemies.Remove(enemy);
+                        this.Controls.Remove(bullet.BulletBox);
+                        this.Controls.Remove(enemy.EnemyBox);
+                        break;
+                    }
                 }
             }
         }
@@ -77,13 +140,23 @@ namespace SpaceShooter
                 player.MoveRight(this.ClientSize.Width);
                 return true;
             }
+            else if (keyData == Keys.Space)
+            {
+                ShootBullet();
+                return true;
+            }
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void ShootBullet()
+        {
+            Point bulletStart = new Point(player.PlayerBox.Left + (player.PlayerBox.Width / 2) - 2, player.PlayerBox.Top - 20);
+            bullets.Add(new Bullet(this, bulletStart));
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-        
         }
     }
 }
