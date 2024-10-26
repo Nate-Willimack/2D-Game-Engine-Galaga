@@ -148,7 +148,7 @@ namespace SpaceShooter
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
-s
+
         private void ShootBullet()
         {
             Point bulletStart = new Point(player.PlayerBox.Left + (player.PlayerBox.Width / 2) - 2, player.PlayerBox.Top - 20);
