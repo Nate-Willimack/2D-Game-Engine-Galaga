@@ -106,8 +106,7 @@ namespace Galaga
         // **Fixed OnKeyUp method**
         private void OnKeyUp(object? sender, KeyEventArgs e)
         {
-            // Currently empty, but required to avoid syntax errors.
-            // If needed, add functionality here.
+           
         }
 
         private void SpawnEnemies()
