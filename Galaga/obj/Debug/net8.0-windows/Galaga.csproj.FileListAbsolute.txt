@@ -1,0 +1,15 @@
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\bin\Debug\net8.0-windows\Galaga.exe
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\bin\Debug\net8.0-windows\Galaga.deps.json
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\bin\Debug\net8.0-windows\Galaga.runtimeconfig.json
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\bin\Debug\net8.0-windows\Galaga.dll
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\bin\Debug\net8.0-windows\Galaga.pdb
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\Galaga.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\Galaga.AssemblyInfoInputs.cache
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\Galaga.AssemblyInfo.cs
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\Galaga.csproj.CoreCompileInputs.cache
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\Galaga.sourcelink.json
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\Galaga.dll
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\refint\Galaga.dll
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\Galaga.pdb
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\Galaga.genruntimeconfig.cache
+C:\Users\22naw\OneDrive\Desktop\codeProjects\Galaga\2D-Game-Engine-Galaga\Galaga\obj\Debug\net8.0-windows\ref\Galaga.dll
