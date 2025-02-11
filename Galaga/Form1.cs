@@ -35,7 +35,7 @@ namespace Galaga
         {
             for (int i = bullets.Count - 1; i >= 0; i--)
             {
-                bullets[i].MoveUp(); 
+                bullets[i].MoveUp();
                 if (bullets[i].IsOffScreen())
                 {
                     bullets[i].Destroy();
@@ -103,9 +103,12 @@ namespace Galaga
                 bullets.Add(new Bullet(this, new Point(player.PlayerBox.Location.X + 22, player.PlayerBox.Location.Y)));
         }
 
+        // **Fixed OnKeyUp method**
         private void OnKeyUp(object? sender, KeyEventArgs e)
-        
-        
+        {
+            // Currently empty, but required to avoid syntax errors.
+            // If needed, add functionality here.
+        }
 
         private void SpawnEnemies()
         {
